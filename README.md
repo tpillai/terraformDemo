@@ -1,3 +1,4 @@
 # terraformDemo
-terraform init
-terraform apply
+1.terraform init
+
+2.terraform apply
