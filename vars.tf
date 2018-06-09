@@ -11,7 +11,10 @@ variable "subnet_cidr" {
     default = ["190.160.1.0/24","190.160.2.0/24","190.160.3.0/24"]
 }
 
-variable "azs" {
-    type = "list"
-    default = ["us-west-2a","us-west-2b","us-west-2c"]
-}
+#variable "azs" {
+#    type = "list"
+#    default = ["us-west-2a","us-west-2b","us-west-2c"]
+#}
+
+# Declare the data source
+data "aws_availability_zones" "azs" {}
