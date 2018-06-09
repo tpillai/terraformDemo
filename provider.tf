@@ -30,3 +30,10 @@ resource "aws_instance" "web" {
     Name = "HelloTerraForm"
   }
 }
+output "address" {
+  value = "${aws_instance.web.private_ip}"
+}
+
+output "eip" {
+  value = "${aws_instance.web.*.public_ip}"
+}
