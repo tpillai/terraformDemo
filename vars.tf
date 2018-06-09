@@ -18,3 +18,13 @@ variable "subnet_cidr" {
 
 # Declare the data source
 data "aws_availability_zones" "azs" {}
+
+variable "ec2_ami"{
+  type = "map"
+
+  default = {
+    us-east-1 = "ami-14c5486b"
+    us-west-2 = "ami-e251209a"
+  }
+
+}

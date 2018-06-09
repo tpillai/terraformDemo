@@ -23,10 +23,10 @@ resource "aws_subnet" "subnets" {
 }
 
 resource "aws_instance" "web" {
-  ami           = "${data.aws_ami.ubuntu.id}"
+  ami           = "${lookup(var.ec2_ami,var.region)}"
   instance_type = "t2.micro"
 
   tags {
-    Name = "HelloWorld"
+    Name = "HelloTerraForm"
   }
 }
